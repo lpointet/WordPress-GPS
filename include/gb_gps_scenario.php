@@ -55,4 +55,11 @@ class GBGPS_Scenario {
     public function get_label() {
         return $this->label;
     }
+
+    /**
+     * Return the description
+     */
+    public function get_description() {
+        return $this->description;
+    }
 }

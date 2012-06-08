@@ -9,6 +9,9 @@ class GBGPS {
     // The transient name for remembering the currently played scenario
     const ACTIVE_SCENARIO_TRANSIENT_NAME = 'gb_gps_active_scenario';
 
+    // The admin menu slug
+    const MENU_SLUG = 'gb_gps_launch_scenario';
+
     // Default scenarios configuration
     public static $default_scenarios = array(
         // First Scenario
@@ -52,7 +55,7 @@ class GBGPS {
         // register_activation_hook(__FILE__, array(&$this, 'activate'));
 
         // Add some hooks
-        // add_action('admin_menu', array(&$this, 'admin_menu'));
+        add_action('admin_menu', array(&$this, 'admin_menu'));
         add_action('admin_print_footer_scripts', array(&$this, 'play_scenario'));
         add_action('admin_enqueue_scripts', array(&$this, 'admin_enqueue_scripts'));
         add_action('wp_ajax_gb_gps_stop_scenario', array(&$this, 'stop_scenario'));
@@ -96,8 +99,13 @@ class GBGPS {
 
     /**
      * Include the needed WordPress scripts to display pointers on the right pages
+     * Include the admin panel script when needed
      */
     public function admin_enqueue_scripts($hook) {
+        if('toplevel_page_' . self::MENU_SLUG === $hook) {
+            wp_enqueue_script('gb_gps_admin_menu', GB_GPS_URL . '/js/gb_gps_admin_menu.js', array('jquery'));
+        }
+
         // Retrieve the current scenario
         $id = get_transient($this->get_transient_name());
 
@@ -148,5 +156,37 @@ class GBGPS {
 
         header('HTTP/1.1 204 No Content');
         exit;
+    }
+
+    /**
+     * Add an admin menu page to allow the user to choose the scenario he wants to play
+     */
+    public function admin_menu() {
+        $this->handlePost();
+        add_menu_page( 'WordPress GPS', 'GPS', 'edit_posts', self::MENU_SLUG, array(&$this, 'display_admin_menu') );
+    }
+
+    /**
+     * Handle the post data to launch the wanted scenario
+     */
+    protected function handlePost() {
+        if(!empty($_POST) && wp_verify_nonce($_POST['nonce'], 'gb_gps_nonce')) {
+            if(isset($_POST['scenario'])) {
+                $this->set_active_scenario($_POST['scenario']);
+                $this->message = 'Le scénario a bien été lancé.';
+            }
+        }
+    }
+
+    /**
+     * Display the admin panel where the user will choose which scenario will be played
+     */
+    public function display_admin_menu() {
+        // Security check
+        if(!current_user_can('edit_posts')) {
+            wp_die('Ne refaites jamais ça !');
+        }
+
+        require GB_GPS_COMPLETE_PATH . '/include/admin_menu.tpl.php';
     }
 }
