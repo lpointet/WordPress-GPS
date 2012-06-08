@@ -39,7 +39,7 @@ function gb_gps_default_scenarios() {
         }
     }
 }
-add_action('init', 'gb_gps_default_scenarios');
+add_action('admin_init', 'gb_gps_default_scenarios');
 
 // Let's rock
 global $gb_gps;
