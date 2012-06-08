@@ -35,7 +35,13 @@ function gb_gps_default_scenarios() {
         }
 
         if(!empty($pts)) {
-            gb_gps_register_scenario($pts, $config['label']);
+            $args = array(
+                'pointers' => $pts,
+                'label' => $config['label'],
+                'description' => $config['description'],
+                'capabilities' => $config['capabilities'],
+            );
+            gb_gps_register_scenario($args);
         }
     }
 }

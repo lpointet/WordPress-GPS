@@ -13,10 +13,12 @@ class GBGPS {
     public static $default_scenarios = array(
         // First Scenario
         'gb_gps_add_article_scenario' => array(
-            'label' => 'Cr�er un nouvel article',
+            'label' => 'Créer un nouvel article',
+            'description' => 'Permet de créer un nouvel article qui sera visible sur votre site.',
+            'capabilities' => array('edit_posts'),
             'pointers' => array(
                 // Hook
-                'index.php' => array(
+                'all' => array(
                     // Pointers
                     array(
                         'selector' => '#menu-posts',
@@ -99,7 +101,7 @@ class GBGPS {
         // Retrieve the current scenario
         $id = get_transient($this->get_transient_name());
 
-        if(empty($this->scenarios[$id]))
+        if(FALSE === $id || empty($this->scenarios[$id]))
             return;
 
         if($this->scenarios[$id]->has_display($hook)) {
@@ -118,10 +120,12 @@ class GBGPS {
         // Retrieve the current scenario
         $id = get_transient($this->get_transient_name());
 
-        if(empty($this->scenarios[$id]))
+        if(FALSE === $id || empty($this->scenarios[$id]))
             return;
 
-        $this->scenarios[$id]->process($pagenow);
+        if(GBGPS_Scenario::STOP == $this->scenarios[$id]->process($pagenow)) {
+            $this->set_active_scenario();
+        }
     }
 
     /**
