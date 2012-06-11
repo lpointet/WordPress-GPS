@@ -14,8 +14,8 @@ class GBGPS {
 
     // Default scenarios configuration
     public static $default_scenarios = array(
-        // First Scenario
-        'gb_gps_add_article_scenario' => array(
+        // Add a post
+        'gb_gps_add_post_scenario' => array(
             'label' => 'Créer un nouvel article',
             'description' => 'Permet de créer un nouvel article qui sera visible sur votre site.',
             'capabilities' => array('edit_posts'),
@@ -25,17 +25,122 @@ class GBGPS {
                     // Pointers
                     array(
                         'selector' => '#menu-posts',
-                        'content' => '<h3>Aller dans le menu "Articles"</h3><p>Il vous suffit de cliquer sur ce menu.</p>',
+                        'content' => '<h3>Aller dans le menu "Articles"</h3><p>Cliquez sur "Articles" afin d\'accéder à la partie correspondante. Vous verrez alors la liste de tous les articles existants.</p>',
                         'position' => array(
-                            'edge' => 'left',
-                            'align' => 'center',
+                            'edge' => 'top',
+                            'align' => 'right',
                         ),
                     ),
                 ),
                 'edit.php' => array(
                     array(
                         'selector' => '.add-new-h2',
-                        'content' => '<h3>Ouvrir un nouveau formulaire</h3><p>Cliquer sur le bouton "Ajouter".</p>',
+                        'content' => '<h3>Ouvrir un nouveau formulaire</h3><p>Cliquez sur le bouton "Ajouter" afin d\'accéder au formulaire de création d\'un article.</p>',
+                        'position' => array(
+                            'edge' => 'top',
+                            'offset' => '-40 0',
+                        ),
+                    ),
+                ),
+            ),
+        ),
+        // Set a category to a post
+        'gb_gps_add_cat_to_post' => array(
+            'label' => 'Affecter une catégorie à un article',
+            'description' => 'Permet d\'ajouter une liaison entre un article existant et une catégorie.',
+            'capabilities' => array('edit_posts'),
+            'pointers' => array(
+                // Hook
+                'all' => array(
+                    // Pointers
+                    array(
+                        'selector' => '#menu-posts',
+                        'content' => '<h3>Aller dans le menu "Articles"</h3><p>Cliquez sur "Articles" afin d\'accéder à la partie correspondante. Vous verrez alors la liste de tous les articles existants.</p>',
+                        'position' => array(
+                            'edge' => 'top',
+                            'align' => 'right',
+                        ),
+                    ),
+                ),
+                'edit.php' => array(
+                    array(
+                        'selector' => '#title',
+                        'content' => '<h3>Sélectionner un article</h3><p>Cliquez sur le titre de l\'article sur lequel vous souhaitez affecter la catégorie.</p>',
+                        'position' => array(
+                            'edge' => 'bottom',
+                            'align' => 'right',
+                            'offset' => '-100 23',
+                        ),
+                    ),
+                ),
+                'post.php' => array(
+                    array(
+                        'selector' => '#categorydiv',
+                        'content' => '<h3>Cocher la catégorie</h3><p>Cochez la catégorie que vous voulez affecter à l\'article. Si elle n\'existe pas, vous pouvez en ajouter une nouvelle directement.</p>',
+                        'position' => array(
+                            'edge' => 'bottom',
+                            'offset' => '0 -5',
+                        ),
+                    ),
+                ),
+            ),
+        ),
+        // Add an user
+        'gb_gps_add_user' => array(
+            'label' => 'Ajouter un nouvel utilisateur',
+            'description' => 'Permet d\'ajouter un nouvel utilisateur ayant accès au backoffice de WordPress.',
+            'capabilities' => array('edit_users'),
+            'pointers' => array(
+                // Hook
+                'all' => array(
+                    // Pointers
+                    array(
+                        'selector' => '#menu-users',
+                        'content' => '<h3>Aller dans le menu "Utilisateurs"</h3><p>Cliquez sur "Utilisateurs" afin d\'accéder à la partie correspondante. Vous verrez alors la liste de tous les utilisateurs existants.</p>',
+                        'position' => array(
+                            'edge' => 'top',
+                            'align' => 'right',
+                        ),
+                    ),
+                ),
+                'users.php' => array(
+                    array(
+                        'selector' => '.add-new-h2',
+                        'content' => '<h3>Ouvrir un nouveau formulaire</h3><p>Cliquez sur le bouton "Ajouter" afin d\'accéder au formulaire de création d\'un utilisateur.</p>',
+                        'position' => array(
+                            'edge' => 'top',
+                            'offset' => '-40 0',
+                        ),
+                    ),
+                ),
+                'user-new.php' => array(
+                    array(
+                        'selector' => '#user_login',
+                        'content' => '<p>Remplissez le champ "Identifiant".</p>',
+                        'position' => array(
+                            'edge' => 'left',
+                            'offset' => '0 -30',
+                        ),
+                    ),
+                    array(
+                        'selector' => '#email',
+                        'content' => '<p>Remplissez le champ "E-mail".</p>',
+                        'position' => array(
+                            'edge' => 'left',
+                            'offset' => '0 -30',
+                        ),
+                    ),
+                    array(
+                        'selector' => '#pass1',
+                        'content' => '<p>Remplissez les champs "Mot de passe".</p>',
+                        'position' => array(
+                            'edge' => 'left',
+                            'offset' => '0 -30',
+                        ),
+                    ),
+                    array(
+                        'selector' => '#role',
+                        'content' => '<p>Sélectionnez le rôle souhaité pour cet utilisateur.</p>',
                         'position' => array(
                             'edge' => 'top',
                         ),
@@ -52,8 +157,6 @@ class GBGPS {
      * Constructor
      */
     public function __construct() {
-        // register_activation_hook(__FILE__, array(&$this, 'activate'));
-
         // Add some hooks
         add_action('admin_menu', array(&$this, 'admin_menu'));
         add_action('admin_print_footer_scripts', array(&$this, 'play_scenario'));
@@ -73,11 +176,9 @@ class GBGPS {
     }
 
     /**
-     * Activation hook
+     * Return the transient's name to store the current scenario for a user
+     * We don't use user meta because of the expiration functionality => we don't want the scenario is played forever
      */
-    public function activate() {
-    }
-
     protected function get_transient_name() {
         // Get the current user
         $user = wp_get_current_user();
