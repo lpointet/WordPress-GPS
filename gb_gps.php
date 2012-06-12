@@ -22,8 +22,10 @@ require GB_GPS_COMPLETE_PATH . '/include/api.php';
 
 // Function triggered to register the default scenarios included with the plugin
 function gb_gps_default_scenarios() {
+    require GB_GPS_COMPLETE_PATH . '/scenarios.php';
+
     // Let the other plugins or themes filter the default scenarios configuration so that they can easily delete some (or even all) of them
-    $scenarios = apply_filters('gb_gps_default_scenarios', GBGPS::$default_scenarios);
+    $scenarios = apply_filters('gb_gps_default_scenarios', $scenarios);
 
     foreach($scenarios as $scenario => $config) {
         $pts = array();
