@@ -1,0 +1,133 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress GPS 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-12 17:14+0100\n"
+"PO-Revision-Date: 2012-06-12 17:14+0100\n"
+"Last-Translator: Lionel Pointet <lionel.pointet@globalis-ms.com>\n"
+"Language-Team: Lionel POINTET <lionel.pointet@globalis-ms.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-Basepath: Z:\\webperso\\veille\\wordpress\\wp-content\\plugins\\gb_gps\\include\\\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: lang.php:3
+msgid "WordPress GPS : lancer un scénario"
+msgstr "WordPress GPS: launch a scenario"
+
+#: lang.php:4
+msgid "Sélectionnez un scénario"
+msgstr "Select a scenario"
+
+#: lang.php:5
+msgid "Scénario à lancer"
+msgstr "Scenario to launch"
+
+#: lang.php:6
+msgid "WordPress GPS"
+msgstr "WordPress GPS"
+
+#: lang.php:7
+msgid "GPS"
+msgstr "GPS"
+
+#: lang.php:8
+msgid "Lancer !"
+msgstr "Launch!"
+
+#: lang.php:11
+msgid "Créer un nouvel article"
+msgstr "Create a new post"
+
+#: lang.php:12
+msgid "Permet de créer un nouvel article qui sera visible sur votre site."
+msgstr "Allow to create a new post which will be visible on your website."
+
+#: lang.php:13
+#, php-format
+msgid "Aller dans le menu \"%s\""
+msgstr "Go to the \"%s\" menu"
+
+#: lang.php:14
+#, php-format
+msgid "Cliquez sur \"%s\" afin d'accéder à la partie correspondante. Vous verrez alors la liste de tous les %s."
+msgstr "Click on \"%s\" to access the corresponding screen. You'll see the list of all %s."
+
+#: lang.php:15
+msgid "Ouvrir un nouveau formulaire"
+msgstr "Open a new form"
+
+#: lang.php:16
+#, php-format
+msgid "Cliquez sur le bouton \"Ajouter\" afin d'accéder au formulaire de création d'un %s."
+msgstr "Click on the \"Add new\" button to access to the %s creation form."
+
+#: lang.php:18
+msgid "Affecter une catégorie à un article"
+msgstr "Affect a category to a post"
+
+#: lang.php:19
+msgid "Permet d'ajouter une liaison entre un article existant et une catégorie."
+msgstr "Allow to add a link between an existing post and a category."
+
+#: lang.php:20
+msgid "Sélectionner un article"
+msgstr "Sélect a post"
+
+#: lang.php:21
+msgid "Cliquez sur le titre de l'article sur lequel vous souhaitez affecter la catégorie."
+msgstr "Click on the post title on which you want to affect the category"
+
+#: lang.php:22
+msgid "Cocher la catégorie"
+msgstr "Check the category"
+
+#: lang.php:23
+msgid "Cochez la catégorie que vous voulez affecter à l'article. Si elle n'existe pas, vous pouvez en ajouter une nouvelle directement."
+msgstr "Check the category you want to affect to the post. If it doesn't exist, you can add one directly."
+
+#: lang.php:25
+msgid "Ajouter un nouvel utilisateur"
+msgstr "Add a new user"
+
+#: lang.php:26
+msgid "Permet d'ajouter un nouvel utilisateur ayant accès au backoffice de WordPress."
+msgstr "Allow to add a new user allowing to access to WordPress backend."
+
+#: lang.php:27
+msgid "Remplissez le champ \"Identifiant\"."
+msgstr "Fill in the \"Login\" field."
+
+#: lang.php:28
+msgid "Remplissez le champ \"E-mail\"."
+msgstr "Fill in the \"E-mail\" field."
+
+#: lang.php:29
+msgid "Remplissez les champs \"Mot de passe\"."
+msgstr "Fill in the \"Password\" fields."
+
+#: lang.php:30
+msgid "Sélectionnez le rôle souhaité pour cet utilisateur."
+msgstr "Select the role you want for that user."
+
+#: lang.php:33
+msgid "Le scénario a bien été lancé."
+msgstr "Scenario launched."
+
+#: lang.php:34
+msgid "Ne refaites jamais ça !"
+msgstr "Don't do this ever again!"
+
+#: lang.php:37
+msgid "utilisateurs"
+msgstr "users"
+
+#: lang.php:38
+msgid "utilisateur"
+msgstr "user"
+

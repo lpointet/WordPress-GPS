@@ -12,6 +12,11 @@ License: GPL2
 // Include the config file
 require 'include/config.php';
 
+load_plugin_textdomain(GB_GPS_TEXT_DOMAIN, NULL, GB_GPS_PATH . '/language/');
+
+// Include the lang file
+require GB_GPS_COMPLETE_PATH . '/include/lang.php';
+
 // Include some needed classes
 require GB_GPS_COMPLETE_PATH . '/include/gb_gps_pointer.php';
 require GB_GPS_COMPLETE_PATH . '/include/gb_gps_scenario.php';

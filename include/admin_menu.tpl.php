@@ -4,7 +4,7 @@
     <div id="icon-themes" class="icon32"><br></div>
 
     <!-- Title -->
-    <h2>WordPress GPS : lancer un scénario</h2>
+    <h2><?php echo GB_GPS_ADMIN_MENU_TITLE; ?></h2>
 
     <?php if(!empty($this->message)): ?>
         <div id="setting-error-settings_updated" class="updated settings-error">
@@ -16,11 +16,11 @@
     <form method="post" action="">
         <input type="hidden" name="nonce" value="<?php echo wp_create_nonce('gb_gps_nonce'); ?>" />
 
-        <h3>Sélectionnez un scénario</h3>
+        <h3><?php echo GB_GPS_ADMIN_MENU_SUBTITLE; ?></h3>
 
         <table class="form-table">
             <tr valign="top">
-                <th scope="row">Scénario à lancer</th>
+                <th scope="row"><?php echo GB_GPS_ADMIN_MENU_LABEL; ?></th>
 
                 <td>
                     <select id="gb_gps_select_scenario" name="scenario">
@@ -47,7 +47,7 @@
 
         <!-- Submit button -->
         <p class="submit">
-            <input type="submit" class="button-primary" value="Lancer !" />
+            <input type="submit" class="button-primary" value="<?php echo GB_GPS_ADMIN_MENU_LAUNCH_BUTTON; ?>" />
         </p>
 
     </form>
