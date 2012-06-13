@@ -174,4 +174,58 @@ $scenarios = array(
             ),
         ),
     ),
+    // Update menus
+    'gb_gps_update_menus' => array(
+        'label' => GB_GPS_UPDATE_MENUS_SCENARIO_LABEL,
+        'description' => GB_GPS_UPDATE_MENUS_SCENARIO_DESCRIPTION,
+        'capabilities' => array('edit_theme_options'),
+        'pointers' => array(
+            // Hook
+            'all' => array(
+                // Pointers
+                array(
+                    'selector' => '#menu-appearance',
+                    'content' => '<h3>' . sprintf(GB_GPS_MENU_POINTER_TITLE, __('Appearance')) . '</h3><p>' . sprintf(GB_GPS_MENU_POINTER_CONTENT, __('Appearance'), GB_GPS_LOWER_CASE_THEMES) . '</p>',
+                    'position' => array(
+                        'edge' => 'top',
+                    ),
+                ),
+            ),
+            'themes.php' => array(
+                array(
+                    'selector' => '#menu-appearance a[href=nav-menus\\\.php]',
+                    'content' => '<h3>' . sprintf(GB_GPS_MENU_POINTER_TITLE, __('Menus')) . '</h3><p>' . sprintf(GB_GPS_MENU_POINTER_CONTENT, __('Menus'), __('menus')) . '</p>',
+                    'position' => array(
+                        'edge' => 'top',
+                    ),
+                ),
+            ),
+            'nav-menus.php' => array(
+                array(
+                    'selector' => '.menu-add-new',
+                    'content' => '<p>' . GB_GPS_UPDATE_MENUS_CHOOSE_MENU_POINTER_CONTENT . '</p>',
+                    'position' => array(
+                        'edge' => 'left',
+                        'offset' => '0 -35',
+                    ),
+                ),
+                array(
+                    'selector' => '.submit-add-to-menu',
+                    'content' => '<p>' . GB_GPS_UPDATE_MENUS_ADD_TO_MENU_POINTER_CONTENT . '</p>',
+                    'position' => array(
+                        'edge' => 'left',
+                        'offset' => '0 -35',
+                    ),
+                ),
+                array(
+                    'selector' => '.menu-save',
+                    'content' => '<p>' . GB_GPS_UPDATE_MENUS_SAVE_MENU_POINTER_CONTENT . '</p>',
+                    'position' => array(
+                        'edge' => 'right',
+                        'offset' => '-15 -37',
+                    ),
+                ),
+            ),
+        ),
+    ),
 );

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress GPS 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-13 12:25+0100\n"
-"PO-Revision-Date: 2012-06-13 12:25+0100\n"
+"POT-Creation-Date: 2012-06-13 15:27+0100\n"
+"PO-Revision-Date: 2012-06-13 15:27+0100\n"
 "Last-Translator: Lionel Pointet <lionel.pointet@globalis-ms.com>\n"
 "Language-Team: Lionel POINTET <lionel.pointet@globalis-ms.com>\n"
 "MIME-Version: 1.0\n"
@@ -131,27 +131,51 @@ msgstr ""
 msgid "Vous pouvez parcourir vos fichiers ou les glisser dans la zone afin d'en ajouter de nouveaux."
 msgstr ""
 
+#: lang.php:37
+msgid "Mettre à jour les menus"
+msgstr ""
+
 #: lang.php:38
-msgid "Le scénario a bien été lancé."
+msgid "Permet de modifier un ou plusieurs menus personnalisés."
 msgstr ""
 
 #: lang.php:39
-msgid "Ne refaites jamais ça !"
+msgid "1. Choisissez un menu ou créez-en un nouveau."
 msgstr ""
 
-#: lang.php:42
-msgid "utilisateurs"
+#: lang.php:40
+msgid "2. Ajoutez des éléments à votre menu après les avoir sélectionnés."
 msgstr ""
 
-#: lang.php:43
-msgid "utilisateur"
+#: lang.php:41
+msgid "3. N'oubliez pas d'enregistrer votre menu après les modifications."
 msgstr ""
 
 #: lang.php:44
-msgid "médias"
+msgid "Le scénario a bien été lancé."
 msgstr ""
 
 #: lang.php:45
+msgid "Ne refaites jamais ça !"
+msgstr ""
+
+#: lang.php:48
+msgid "utilisateurs"
+msgstr ""
+
+#: lang.php:49
+msgid "utilisateur"
+msgstr ""
+
+#: lang.php:50
+msgid "médias"
+msgstr ""
+
+#: lang.php:51
 msgid "média"
+msgstr ""
+
+#: lang.php:52
+msgid "thèmes"
 msgstr ""
 
