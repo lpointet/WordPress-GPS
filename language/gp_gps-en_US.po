@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress GPS 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-12 17:14+0100\n"
-"PO-Revision-Date: 2012-06-12 17:14+0100\n"
+"POT-Creation-Date: 2012-06-13 12:23+0100\n"
+"PO-Revision-Date: 2012-06-13 12:25+0100\n"
 "Last-Translator: Lionel Pointet <lionel.pointet@globalis-ms.com>\n"
 "Language-Team: Lionel POINTET <lionel.pointet@globalis-ms.com>\n"
 "MIME-Version: 1.0\n"
@@ -115,19 +115,43 @@ msgstr "Fill in the \"Password\" fields."
 msgid "Sélectionnez le rôle souhaité pour cet utilisateur."
 msgstr "Select the role you want for that user."
 
+#: lang.php:32
+msgid "Ajouter un média"
+msgstr "Add a media"
+
 #: lang.php:33
+msgid "Permet d'ajouter un nouveau média (image / PDF / son...) à la bibliothèque du site"
+msgstr "Allow to add a new media (picture / PDF / sound...) to the website's library"
+
+#: lang.php:34
+msgid "Envoyer les fichiers"
+msgstr "Send the files"
+
+#: lang.php:35
+msgid "Vous pouvez parcourir vos fichiers ou les glisser dans la zone afin d'en ajouter de nouveaux."
+msgstr "You can browse your files or drag them in the area to add new ones."
+
+#: lang.php:38
 msgid "Le scénario a bien été lancé."
 msgstr "Scenario launched."
 
-#: lang.php:34
+#: lang.php:39
 msgid "Ne refaites jamais ça !"
 msgstr "Don't do this ever again!"
 
-#: lang.php:37
+#: lang.php:42
 msgid "utilisateurs"
 msgstr "users"
 
-#: lang.php:38
+#: lang.php:43
 msgid "utilisateur"
 msgstr "user"
+
+#: lang.php:44
+msgid "médias"
+msgstr "medias"
+
+#: lang.php:45
+msgid "média"
+msgstr "media"
 

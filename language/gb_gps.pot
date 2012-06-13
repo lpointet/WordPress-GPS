@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress GPS 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-12 17:18+0100\n"
-"PO-Revision-Date: 2012-06-12 17:18+0100\n"
+"POT-Creation-Date: 2012-06-13 12:25+0100\n"
+"PO-Revision-Date: 2012-06-13 12:25+0100\n"
 "Last-Translator: Lionel Pointet <lionel.pointet@globalis-ms.com>\n"
 "Language-Team: Lionel POINTET <lionel.pointet@globalis-ms.com>\n"
 "MIME-Version: 1.0\n"
@@ -115,19 +115,43 @@ msgstr ""
 msgid "Sélectionnez le rôle souhaité pour cet utilisateur."
 msgstr ""
 
+#: lang.php:32
+msgid "Ajouter un média"
+msgstr ""
+
 #: lang.php:33
-msgid "Le scénario a bien été lancé."
+msgid "Permet d'ajouter un nouveau média (image / PDF / son...) à la bibliothèque du site"
 msgstr ""
 
 #: lang.php:34
-msgid "Ne refaites jamais ça !"
+msgid "Envoyer les fichiers"
 msgstr ""
 
-#: lang.php:37
-msgid "utilisateurs"
+#: lang.php:35
+msgid "Vous pouvez parcourir vos fichiers ou les glisser dans la zone afin d'en ajouter de nouveaux."
 msgstr ""
 
 #: lang.php:38
+msgid "Le scénario a bien été lancé."
+msgstr ""
+
+#: lang.php:39
+msgid "Ne refaites jamais ça !"
+msgstr ""
+
+#: lang.php:42
+msgid "utilisateurs"
+msgstr ""
+
+#: lang.php:43
 msgid "utilisateur"
+msgstr ""
+
+#: lang.php:44
+msgid "médias"
+msgstr ""
+
+#: lang.php:45
+msgid "média"
 msgstr ""
 

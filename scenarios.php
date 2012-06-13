@@ -135,4 +135,43 @@ $scenarios = array(
             ),
         ),
     ),
+    // Add a media
+    'gb_gps_add_media' => array(
+        'label' => GB_GPS_ADD_MEDIA_SCENARIO_LABEL,
+        'description' => GB_GPS_ADD_MEDIA_SCENARIO_DESCRIPTION,
+        'capabilities' => array('upload_files'),
+        'pointers' => array(
+            // Hook
+            'all' => array(
+                // Pointers
+                array(
+                    'selector' => '#menu-media',
+                    'content' => '<h3>' . sprintf(GB_GPS_MENU_POINTER_TITLE, __('Media')) . '</h3><p>' . sprintf(GB_GPS_MENU_POINTER_CONTENT, __('Media'), GB_GPS_LOWER_CASE_MEDIAS) . '</p>',
+                    'position' => array(
+                        'edge' => 'top',
+                    ),
+                ),
+            ),
+            'upload.php' => array(
+                array(
+                    'selector' => '.add-new-h2',
+                    'content' => '<h3>' . GB_GPS_ADD_FROM_LIST_POINTER_TITLE . '</h3><p>' . sprintf(GB_GPS_ADD_FROM_LIST_POINTER_CONTENT, GB_GPS_LOWER_CASE_MEDIA) . '</p>',
+                    'position' => array(
+                        'edge' => 'top',
+                        'offset' => '-40 0',
+                    ),
+                ),
+            ),
+            'media-new.php' => array(
+                array(
+                    'selector' => '#plupload-browse-button',
+                    'content' => '<h3>' . GB_GPS_ADD_MEDIA_UPLOAD_POINTER_TITLE . '</h3><p>' . GB_GPS_ADD_MEDIA_UPLOAD_POINTER_CONTENT . '</p>',
+                    'position' => array(
+                        'edge' => 'top',
+                        'offset' => '-25 0',
+                    ),
+                ),
+            ),
+        ),
+    ),
 );

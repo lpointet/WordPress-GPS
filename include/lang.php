@@ -29,6 +29,11 @@ define('GB_GPS_EMAIL_FIELD_POINTER_CONTENT', __('Remplissez le champ "E-mail".',
 define('GB_GPS_PASSWORD_FIELD_POINTER_CONTENT', __('Remplissez les champs "Mot de passe".', GB_GPS_TEXT_DOMAIN));
 define('GB_GPS_ROLE_FIELD_POINTER_CONTENT', __('Sélectionnez le rôle souhaité pour cet utilisateur.', GB_GPS_TEXT_DOMAIN));
 
+define('GB_GPS_ADD_MEDIA_SCENARIO_LABEL', __('Ajouter un média', GB_GPS_TEXT_DOMAIN));
+define('GB_GPS_ADD_MEDIA_SCENARIO_DESCRIPTION', __('Permet d\'ajouter un nouveau média (image / PDF / son...) à la bibliothèque du site', GB_GPS_TEXT_DOMAIN));
+define('GB_GPS_ADD_MEDIA_UPLOAD_POINTER_TITLE', __('Envoyer les fichiers', GB_GPS_TEXT_DOMAIN));
+define('GB_GPS_ADD_MEDIA_UPLOAD_POINTER_CONTENT', __('Vous pouvez parcourir vos fichiers ou les glisser dans la zone afin d\'en ajouter de nouveaux.', GB_GPS_TEXT_DOMAIN));
+
 // Messages
 define('GB_GPS_MESSAGE_LAUNCHED_SCENARIO', __('Le scénario a bien été lancé.', GB_GPS_TEXT_DOMAIN));
 define('GB_GPS_MESSAGE_CAPABILITY_ERROR', __('Ne refaites jamais ça !', GB_GPS_TEXT_DOMAIN));
@@ -36,3 +41,5 @@ define('GB_GPS_MESSAGE_CAPABILITY_ERROR', __('Ne refaites jamais ça !', GB_GPS_
 // Generic strings
 define('GB_GPS_LOWER_CASE_USERS', __('utilisateurs', GB_GPS_TEXT_DOMAIN));
 define('GB_GPS_LOWER_CASE_USER', __('utilisateur', GB_GPS_TEXT_DOMAIN));
+define('GB_GPS_LOWER_CASE_MEDIAS', __('médias', GB_GPS_TEXT_DOMAIN));
+define('GB_GPS_LOWER_CASE_MEDIA', __('média', GB_GPS_TEXT_DOMAIN));
