@@ -33,7 +33,7 @@ WordPress GPS provides some hooks to plugin writers:
         ),  
     );
 
-    $pointer = new GBGPS\_Pointer($pointer\_config);
+    $pointer = new GBGPS_Pointer($pointer_config);
 
 ### Parameters
 
@@ -59,7 +59,7 @@ WordPress GPS provides some hooks to plugin writers:
         'capabilities' => array('edit_post'),  
     );
 
-    gb\_gps\_register\_scenario($args);
+    gb_gps_register_scenario($args);
 
 ### Parameters
 
@@ -114,7 +114,7 @@ WordPress GPS propose quelques hooks pour les développeurs de plugin :
         ),  
     );
 
-    $pointer = new GBGPS\_Pointer($pointer\_config);
+    $pointer = new GBGPS_Pointer($pointer_config);
 
 ### Paramètres
 
@@ -140,7 +140,7 @@ WordPress GPS propose quelques hooks pour les développeurs de plugin :
         'capabilities' => array('edit_post'),  
     );
 
-    gb\_gps\_register\_scenario($args);
+    gb_gps_register_scenario($args);
 
 ### Paramètres
 
