@@ -26,7 +26,7 @@ WordPress GPS provides some hooks to plugin writers:
 
     $pointer\_config = array(  
         'selector' => '#menu-posts',  
-        'content' => '&lt;h3&gt;title&lt;/h3&gt;&lt;p&gt;content&lt;/p&gt;',  
+        'content' => '<h3>title</h3><p>content</p>',  
         'position' => array(  
             'edge' => 'top',  
             'align' => 'right',  
@@ -107,7 +107,7 @@ WordPress GPS propose quelques hooks pour les développeurs de plugin :
 
     $pointer\_config = array(  
         'selector' => '#menu-posts',  
-        'content' => '&lt;h3&gt;titre&lt;/h3&gt;&lt;p&gt;contenu&lt;/p&gt;',  
+        'content' => '<h3>titre</h3><p>contenu</p>',  
         'position' => array(  
             'edge' => 'top',  
             'align' => 'right',  
