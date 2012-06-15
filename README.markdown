@@ -24,16 +24,16 @@ WordPress GPS provides some hooks to plugin writers:
 
 ### Usage
 
-> $pointer\_config = array(  
->     'selector' => '#menu-posts',  
->     'content' => '&lt;h3&gt;title&lt;/h3&gt;&lt;p&gt;content&lt;/p&gt;',  
->     'position' => array(  
->         'edge' => 'top',  
->         'align' => 'right',  
->     ),  
-> );
->
-> $pointer = new GBGPS\_Pointer($pointer\_config);
+    $pointer\_config = array(  
+        'selector' => '#menu-posts',  
+        'content' => '&lt;h3&gt;title&lt;/h3&gt;&lt;p&gt;content&lt;/p&gt;',  
+        'position' => array(  
+            'edge' => 'top',  
+            'align' => 'right',  
+        ),  
+    );
+
+    $pointer = new GBGPS\_Pointer($pointer\_config);
 
 ### Parameters
 
@@ -52,14 +52,14 @@ WordPress GPS provides some hooks to plugin writers:
 
 ### Usage
 
-> $args = array(  
->     'pointers' => $pointers,  
->     'label' => $label,  
->     'description' => $description,  
->     'capabilities' => array('edit_post'),  
-> );
->
-> gb\_gps\_register\_scenario($args);
+    $args = array(  
+        'pointers' => $pointers,  
+        'label' => $label,  
+        'description' => $description,  
+        'capabilities' => array('edit_post'),  
+    );
+
+    gb\_gps\_register\_scenario($args);
 
 ### Parameters
 
@@ -105,16 +105,16 @@ WordPress GPS propose quelques hooks pour les développeurs de plugin :
 
 ### Utilisation
 
-> $pointer\_config = array(  
->     'selector' => '#menu-posts',  
->     'content' => '&lt;h3&gt;titre&lt;/h3&gt;&lt;p&gt;contenu&lt;/p&gt;',  
->     'position' => array(  
->         'edge' => 'top',  
->         'align' => 'right',  
->     ),  
-> );
->
-> $pointer = new GBGPS\_Pointer($pointer\_config);
+    $pointer\_config = array(  
+        'selector' => '#menu-posts',  
+        'content' => '&lt;h3&gt;titre&lt;/h3&gt;&lt;p&gt;contenu&lt;/p&gt;',  
+        'position' => array(  
+            'edge' => 'top',  
+            'align' => 'right',  
+        ),  
+    );
+
+    $pointer = new GBGPS\_Pointer($pointer\_config);
 
 ### Paramètres
 
@@ -133,14 +133,14 @@ WordPress GPS propose quelques hooks pour les développeurs de plugin :
 
 ### Utilisation
 
-> $args = array(  
->     'pointers' => $pointers,  
->     'label' => $label,  
->     'description' => $description,  
->     'capabilities' => array('edit_post'),  
-> );
->
-> gb\_gps\_register\_scenario($args);
+    $args = array(  
+        'pointers' => $pointers,  
+        'label' => $label,  
+        'description' => $description,  
+        'capabilities' => array('edit_post'),  
+    );
+
+    gb\_gps\_register\_scenario($args);
 
 ### Paramètres
 
