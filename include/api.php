@@ -2,7 +2,7 @@
 /**
  * Register a new scenario in the list of available ones
  *
- * @param   array   $pointers   The list of pointers in the correct order for the scenario
+ * @param   array   $args       The list of pointers in the correct order for the scenario and some other needed arguments
  *
  * @return  bool    $return     TRUE in case of success, FALSE otherwise
  */
@@ -65,4 +65,35 @@ function gb_gps_register_scenario($args) {
     }
 
     return $return;
+}
+
+/**
+ * Create a new pointer and return it
+ *
+ * @param   array   $args       Arguments to pass to the GBGPS_Pointer class
+ *
+ * @return  bool    $pointer    The GBGPS_Pointer object or NULL
+ */
+function gb_gps_create_pointer($args) {
+    $defaults = array(
+        'selector' => '',
+        'content' => '',
+        'position' => '',
+    );
+
+    $args = wp_parse_args($args, $defaults);
+
+    extract($args);
+
+    $pointer = NULL;
+
+    if(!empty($selector)) {
+        $pointer = new GBGPS_Pointer(array(
+            'selector' => $selector,
+            'content' => $content,
+            'position' => $position,
+        ));
+    }
+
+    return $pointer;
 }

@@ -37,7 +37,7 @@ function gb_gps_default_scenarios() {
         foreach($config['pointers'] as $hook => $pointers) {
             $pts[$hook] = array();
             foreach($pointers as $pt_conf) {
-                $pts[$hook][] = new GBGPS_Pointer($pt_conf);
+                $pts[$hook][] = gb_gps_create_pointer($pt_conf);
             }
         }
 
