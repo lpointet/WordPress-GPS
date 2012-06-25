@@ -3,7 +3,7 @@ Contributors: lpointet
 Tags: admin, help, tutorial, scenario, pointers
 Requires at least: 3.3.0
 Tested up to: 3.4
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,69 +41,72 @@ Of course it is, but only through the API for now.
 
 == Changelog ==
 
+= 1.0.2 =
+* Added a function to the API to be more consistent
+* Updated Docs
+
 = 1.0 =
 * First release of the plugin
 
 == API ==
 
-# API
 WordPress GPS provides some hooks to plugin writers:
 
 * a filter to add, remove or order the default scenarios (_gb\_gps\_default\_scenarios_)
-* a class to create a new "pointer": GBGPS_Pointer
+* a function to create a new "pointer": gb\_gps\_create\_pointer
 * a single function to register a new scenario: _gb\_gps\_register\_scenario_
 
-## GBGPS_Pointer
+# gb\_gps\_create\_pointer
 
-### Usage
+## Usage
 
-    $pointer_config = array(  
-        'selector' => '#menu-posts',  
-        'content' => '<h3>title</h3><p>content</p>',  
-        'position' => array(  
-            'edge' => 'top',  
-            'align' => 'right',  
-        ),  
+    $pointer_config = array(
+        'selector' => '#menu-posts',
+        'content' => '<h3>title</h3><p>content</p>',
+        'position' => array(
+            'edge' => 'top',
+            'align' => 'right',
+        ),
     );
 
-    $pointer = new GBGPS_Pointer($pointer_config);
+    $pointer = gb_gps_create_pointer($pointer_config);
 
-### Parameters
+## Parameters
 
-**selector**  
-    (string) The DOM selector of the element on which the pointer will be attached.  
+**selector**
+    (string) The DOM selector of the element on which the pointer will be attached.
       Default: ''
 
-**content**  
-    (string) The content of the pointer.  
+**content**
+    (string) The content of the pointer.
       Default: ''
 
 **position**
     (array) An array of arguments to pass to a jQuery UI Position Widget (see the documentation: http://jqueryui.com/demos/position/#options).
 
-## gb\_gps\_register\_scenario
+# gb\_gps\_register\_scenario
 
-### Usage
+## Usage
 
-    $args = array(  
-        'pointers' => $pointers,  
-        'label' => $label,  
-        'description' => $description,  
-        'capabilities' => array('edit_post'),  
+    $args = array(
+        'pointers' => $pointers,
+        'label' => $label,
+        'description' => $description,
+        'capabilities' => array('edit_post'),
     );
 
     gb_gps_register_scenario($args);
 
-### Parameters
+## Parameters
 
-**pointers**  
+**pointers**
     (array) An array of GBGPS\_Pointer with this structure: [ 'hook' => [ $pointer\_obj, $pointer\_obj2 ], 'hook2' => [ $pointer\_obj3 ] ], where "hook" is typically the script's name on the WordPress admin ('edit.php') or the keyword "all".
 
-**label**  
+**label**
     (string) The scenario label, which will appear on the select box.
 
-**description**  
+**description**
     (string) The scenario description, which will appear on the admin panel.
 
-**capabilities**  
+**capabilities**
     (array) An array of capabilities as defined by WordPress or even plugins ('edit_post' for example).
