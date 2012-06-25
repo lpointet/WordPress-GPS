@@ -3,7 +3,7 @@ Contributors: lpointet
 Tags: admin, help, tutorial, scenario, pointers, backend, plugin, training
 Requires at least: 3.3.0
 Tested up to: 3.4
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,12 @@ Of course it is, but only through the API for now.
 2. Follow the pointers!
 
 == Changelog ==
+
+= 1.0.4 =
+* Added some images (screenshots + WP banner)
+
+= 1.0.3 =
+* Updated the version number to display in the WordPress Extend "Download" button
 
 = 1.0.2 =
 * Added a function to the API to be more consistent
