@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: lpointet
-Tags: admin, help, tutorial, scenario, pointers
+Tags: admin, help, tutorial, scenario, pointers, backend, plugin, training
 Requires at least: 3.3.0
 Tested up to: 3.4
 Stable tag: 1.0.3
@@ -38,6 +38,11 @@ Please feel free to send me pull requests, issues, evolution requests etc.
 = Is this possible to add scenarios to the existing ones? =
 
 Of course it is, but only through the API for now.
+
+== Screenshots ==
+
+1. Choose the scenario you want to launch from its name and a little description
+2. Follow the pointers!
 
 == Changelog ==
 
