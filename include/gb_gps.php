@@ -95,7 +95,7 @@ class GBGPS {
             return;
 
         if(GBGPS_Scenario::STOP == $this->scenarios[$id]->process($pagenow)) {
-            // $this->set_active_scenario();
+            $this->set_active_scenario();
         }
     }
 
