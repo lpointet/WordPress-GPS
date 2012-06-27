@@ -133,7 +133,7 @@ class GBGPS {
      * Handle the post data to launch the wanted scenario
      */
     protected function handlePost() {
-        if(!empty($_POST) && wp_verify_nonce($_POST['nonce'], 'gb_gps_nonce')) {
+        if(check_admin_referer('gb_gps_nonce', 'nonce')) {
             if(isset($_POST['scenario'])) {
                 $this->set_active_scenario($_POST['scenario']);
                 $this->message = GB_GPS_MESSAGE_LAUNCHED_SCENARIO;
