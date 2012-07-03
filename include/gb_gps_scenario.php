@@ -34,9 +34,7 @@ class GBGPS_Scenario {
         }
 
         if(!empty($this->pointers[$hook])) {
-            foreach($this->pointers[$hook] as $k => $pointer) {
-                $pointer->show();
-            }
+            GBGPS_Pointer::process($this->pointers[$hook]);
         }
 
         return $this->places[$hook] == $this->nb_pointers - 1 ? self::STOP : 0;
