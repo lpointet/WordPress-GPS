@@ -26,44 +26,69 @@ class GBGPS_Pointer {
     }
 
     /**
-     * Include the needed JavaScript to show the pointer
+     * Return the args needed by the javascript: selector, content & position
      */
-    public function show() {
-        $args = array(
+    protected function args() {
+        return array(
+            'selector' => $this->selector,
             'content' => $this->content,
             'position' => $this->position,
         );
+    }
+
+    /**
+     * Include the needed JavaScript to show the pointer(s)
+     */
+    public static function process($pointers) {
         $nonce = wp_create_nonce('gb_gps_ajax_nonce');
+
+        $args = array();
+        foreach($pointers as $pointer) {
+            $args[] = $pointer->args();
+        }
+
         ?>
-		<script type="text/javascript">
-		//<![CDATA[
-		(function($){
-			var options = <?php echo json_encode( $args ); ?>, setup;
-
-			if ( ! options )
-				return;
-
-			options = $.extend( options, {
-				close: function() {
+        <script type="text/javascript">
+        //<![CDATA[
+        (function($){
+            var options = <?php echo json_encode( $args ); ?>,
+                close = function() {
                     $.get(
                         ajaxurl,
                         {action : 'gb_gps_stop_scenario', nonce : '<?php echo esc_js($nonce); ?>'}
                     );
-				}
-			});
+                };
 
-			setup = function() {
-				$('<?php echo $this->selector; ?>').pointer( options ).pointer('open');
-			};
+            if ( ! options )
+                return;
 
-			if ( options.position && options.position.defer_loading )
-				$(window).bind( 'load.wp-pointers', setup );
-			else
-				$(document).ready( setup );
+            var setup = function() {
+                    for(var i = 0, l = options.length; i < l; i++) {
+                        if(options[i].position && options[i].position.defer_loading)
+                            continue;
 
-		})( jQuery );
-		//]]>
-		</script>
-		<?php
+                        var option = $.extend( options[i], {
+                            close: close
+                        });
+                        $(option.selector).pointer( option ).pointer('open');
+                    }
+                },
+                setup_defer = function() {
+                    for(var i = 0, l = options.length; i < l; i++) {
+                        if(options[i].position && options[i].position.defer_loading) {
+                            var option = $.extend( options[i], {
+                                close: close
+                            });
+                            $(option.selector).pointer( option ).pointer('open');
+                        }
+                    }
+                };
+
+            $(window).bind( 'load.wp-pointers', setup_defer );
+            $(document).ready( setup );
+        })( jQuery );
+        //]]>
+        </script>
+        <?php
     }
 }
