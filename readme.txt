@@ -3,7 +3,7 @@ Contributors: lpointet
 Tags: admin, help, tutorial, scenario, pointers, backend, plugin, training
 Requires at least: 3.3.0
 Tested up to: 3.4
-Stable tag: 1.0.9
+Stable tag: 1.0.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,9 @@ Of course it is, but only through the API for now.
 2. Follow the pointers!
 
 == Changelog ==
+
+= 1.0.10 =
+* Fixed textdomain name & set English as default language
 
 = 1.0.9 =
 * Refactored pointers processing to be more concise in JS #WebPerf

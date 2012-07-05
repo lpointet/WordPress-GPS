@@ -2,180 +2,181 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress GPS 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-05 15:42+0100\n"
-"PO-Revision-Date: 2012-07-05 15:42+0100\n"
+"POT-Creation-Date: 2012-07-05 15:43+0100\n"
+"PO-Revision-Date: 2012-07-05 15:51+0100\n"
 "Last-Translator: Lionel Pointet <lionel.pointet@globalis-ms.com>\n"
-"Language-Team: Lionel POINTET <lionel.pointet@globalis-ms.com>\n"
+"Language-Team: Lionel Pointet <lionel.pointet@globalis-ms.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __\n"
 "X-Poedit-Basepath: Z:\\webperso\\veille\\wordpress\\wp-content\\plugins\\gb_gps\\include\n"
+"X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
-"X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: lang.php:3
 msgid "WordPress GPS: launch a scenario"
-msgstr ""
+msgstr "WordPress GPS : lancer un scénario"
 
 #: lang.php:4
 msgid "Select a scenario"
-msgstr ""
+msgstr "Sélectionnez un scénario"
 
 #: lang.php:5
 msgid "Scenario to launch"
-msgstr ""
+msgstr "Scénario à lancer"
 
 #: lang.php:6
 msgid "WordPress GPS"
-msgstr ""
+msgstr "WordPress GPS"
 
 #: lang.php:7
 msgid "GPS"
-msgstr ""
+msgstr "GPS"
 
 #: lang.php:8
 msgid "Launch!"
-msgstr ""
+msgstr "Lancer !"
 
 #: lang.php:11
 msgid "Create a new post"
-msgstr ""
+msgstr "Créer un nouvel article"
 
 #: lang.php:12
 msgid "Allow to create a new post which will be visible on your website."
-msgstr ""
+msgstr "Permet de créer un nouvel article qui sera visible sur votre site."
 
 #: lang.php:13
 #, php-format
 msgid "Go to the \"%s\" menu"
-msgstr ""
+msgstr "Aller dans le menu \"%s\""
 
 #: lang.php:14
 #, php-format
 msgid "Click on \"%s\" to access the corresponding screen. You'll see the list of all %s."
-msgstr ""
+msgstr "Cliquez sur \"%s\" afin d'accéder à la partie correspondante. Vous verrez alors la liste de tous les %s."
 
 #: lang.php:15
 msgid "Open a new form"
-msgstr ""
+msgstr "Ouvrir un nouveau formulaire"
 
 #: lang.php:16
 #, php-format
 msgid "Click on the \"Add new\" button to access to the %s creation form."
-msgstr ""
+msgstr "Cliquez sur le bouton \"Ajouter\" afin d'accéder au formulaire de création d'un %s."
 
 #: lang.php:18
 msgid "Affect a category to a post"
-msgstr ""
+msgstr "Affecter une catégorie à un article"
 
 #: lang.php:19
 msgid "Allow to add a link between an existing post and a category."
-msgstr ""
+msgstr "Permet d'ajouter une liaison entre un article existant et une catégorie."
 
 #: lang.php:20
+#, fuzzy
 msgid "Select a post"
-msgstr ""
+msgstr "Sélectionner un article"
 
 #: lang.php:21
 msgid "Click on the post title on which you want to affect the category"
-msgstr ""
+msgstr "Cliquez sur le titre de l'article sur lequel vous souhaitez affecter la catégorie."
 
 #: lang.php:22
 msgid "Check the category"
-msgstr ""
+msgstr "Cocher la catégorie"
 
 #: lang.php:23
 msgid "Check the category you want to affect to the post. If it doesn't exist, you can add one directly."
-msgstr ""
+msgstr "Cochez la catégorie que vous voulez affecter à l'article. Si elle n'existe pas, vous pouvez en ajouter une nouvelle directement."
 
 #: lang.php:25
 msgid "Add a new user"
-msgstr ""
+msgstr "Ajouter un nouvel utilisateur"
 
 #: lang.php:26
 msgid "Allow to add a new user allowing to access to WordPress backend."
-msgstr ""
+msgstr "Permet d'ajouter un nouvel utilisateur ayant accès au backoffice de WordPress."
 
 #: lang.php:27
 msgid "Fill in the \"Login\" field."
-msgstr ""
+msgstr "Remplissez le champ \"Identifiant\"."
 
 #: lang.php:28
 msgid "Fill in the \"E-mail\" field."
-msgstr ""
+msgstr "Remplissez le champ \"E-mail\"."
 
 #: lang.php:29
 msgid "Fill in the \"Password\" fields."
-msgstr ""
+msgstr "Remplissez les champs \"Mot de passe\"."
 
 #: lang.php:30
 msgid "Select the role you want for that user."
-msgstr ""
+msgstr "Sélectionnez le rôle souhaité pour cet utilisateur."
 
 #: lang.php:32
 msgid "Add a media"
-msgstr ""
+msgstr "Ajouter un média"
 
 #: lang.php:33
 msgid "Allow to add a new media (picture / PDF / sound...) to the website's library"
-msgstr ""
+msgstr "Permet d'ajouter un nouveau média (image / PDF / son...) à la bibliothèque du site"
 
 #: lang.php:34
 msgid "Send the files"
-msgstr ""
+msgstr "Envoyer les fichiers"
 
 #: lang.php:35
 msgid "You can browse your files or drag them in the area to add new ones."
-msgstr ""
+msgstr "Vous pouvez parcourir vos fichiers ou les glisser dans la zone afin d'en ajouter de nouveaux."
 
 #: lang.php:37
 msgid "Update menus"
-msgstr ""
+msgstr "Mettre à jour les menus"
 
 #: lang.php:38
 msgid "Allow to modify one or more custom menus."
-msgstr ""
+msgstr "Permet de modifier un ou plusieurs menus personnalisés."
 
 #: lang.php:39
 msgid "1. Choose a menu or create a new one."
-msgstr ""
+msgstr "1. Choisissez un menu ou créez-en un nouveau."
 
 #: lang.php:40
 msgid "2. Add some items to your menu after having selected them."
-msgstr ""
+msgstr "2. Ajoutez des éléments à votre menu après les avoir sélectionnés."
 
 #: lang.php:41
 msgid "3. Add some items to your menu after having selected them."
-msgstr ""
+msgstr "3. N'oubliez pas d'enregistrer votre menu après les modifications."
 
 #: lang.php:44
 msgid "Scenario launched."
-msgstr ""
+msgstr "Le scénario a bien été lancé."
 
 #: lang.php:45
 msgid "Don't do this ever again!"
-msgstr ""
+msgstr "Ne refaites jamais ça !"
 
 #: lang.php:48
 msgid "users"
-msgstr ""
+msgstr "utilisateurs"
 
 #: lang.php:49
 msgid "user"
-msgstr ""
+msgstr "utilisateur"
 
 #: lang.php:50
 msgid "medias"
-msgstr ""
+msgstr "médias"
 
 #: lang.php:51
 msgid "media"
-msgstr ""
+msgstr "média"
 
 #: lang.php:52
 msgid "themes"
-msgstr ""
+msgstr "thèmes"
 
