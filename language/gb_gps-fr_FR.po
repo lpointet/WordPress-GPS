@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress GPS 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-05 15:43+0100\n"
-"PO-Revision-Date: 2012-07-05 15:51+0100\n"
+"POT-Creation-Date: 2012-08-01 12:45+0100\n"
+"PO-Revision-Date: 2012-08-01 12:47+0100\n"
 "Last-Translator: Lionel Pointet <lionel.pointet@globalis-ms.com>\n"
 "Language-Team: Lionel Pointet <lionel.pointet@globalis-ms.com>\n"
 "MIME-Version: 1.0\n"
@@ -76,7 +76,6 @@ msgid "Allow to add a link between an existing post and a category."
 msgstr "Permet d'ajouter une liaison entre un article existant et une catégorie."
 
 #: lang.php:20
-#, fuzzy
 msgid "Select a post"
 msgstr "Sélectionner un article"
 
@@ -152,31 +151,59 @@ msgstr "2. Ajoutez des éléments à votre menu après les avoir sélectionnés.
 msgid "3. Add some items to your menu after having selected them."
 msgstr "3. N'oubliez pas d'enregistrer votre menu après les modifications."
 
+#: lang.php:43
+msgid "(De-)Activate plugin"
+msgstr "(Dés)Activer une extension"
+
 #: lang.php:44
+msgid "Allow to activate or deactivate one plugin installed on your site."
+msgstr "Permet d'activer ou désactiver une extension (un plugin) installée sur votre site."
+
+#: lang.php:45
+msgid "Select a plugin"
+msgstr "Sélectionner un plugin"
+
+#: lang.php:46
+msgid "Choose the plugin you want to activate or deactivate and click on the corresponding link."
+msgstr "Choisissez l'extension que vous voulez activer ou désactiver et cliquez sur le lien correspondant."
+
+#: lang.php:47
+msgid "Click on the link"
+msgstr "Cliquer sur le lien"
+
+#: lang.php:48
+msgid "You may want to click on the link provided here to activate or deactivate this plugin"
+msgstr "Vous pouvez par exemple vouloir cliquer sur le lien présenté ici pour activer ou désactiver cette extension"
+
+#: lang.php:51
 msgid "Scenario launched."
 msgstr "Le scénario a bien été lancé."
 
-#: lang.php:45
+#: lang.php:52
 msgid "Don't do this ever again!"
 msgstr "Ne refaites jamais ça !"
 
-#: lang.php:48
+#: lang.php:55
 msgid "users"
 msgstr "utilisateurs"
 
-#: lang.php:49
+#: lang.php:56
 msgid "user"
 msgstr "utilisateur"
 
-#: lang.php:50
+#: lang.php:57
 msgid "medias"
 msgstr "médias"
 
-#: lang.php:51
+#: lang.php:58
 msgid "media"
 msgstr "média"
 
-#: lang.php:52
+#: lang.php:59
 msgid "themes"
 msgstr "thèmes"
+
+#: lang.php:60
+msgid "plugins"
+msgstr "plugins"
 
