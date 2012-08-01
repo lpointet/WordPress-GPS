@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress GPS 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-05 15:42+0100\n"
-"PO-Revision-Date: 2012-07-05 15:42+0100\n"
+"POT-Creation-Date: 2012-08-01 12:48+0100\n"
+"PO-Revision-Date: 2012-08-01 12:48+0100\n"
 "Last-Translator: Lionel Pointet <lionel.pointet@globalis-ms.com>\n"
 "Language-Team: Lionel POINTET <lionel.pointet@globalis-ms.com>\n"
 "MIME-Version: 1.0\n"
@@ -151,31 +151,59 @@ msgstr ""
 msgid "3. Add some items to your menu after having selected them."
 msgstr ""
 
+#: lang.php:43
+msgid "(De-)Activate plugin"
+msgstr ""
+
 #: lang.php:44
-msgid "Scenario launched."
+msgid "Allow to activate or deactivate one plugin installed on your site."
 msgstr ""
 
 #: lang.php:45
-msgid "Don't do this ever again!"
+msgid "Select a plugin"
+msgstr ""
+
+#: lang.php:46
+msgid "Choose the plugin you want to activate or deactivate and click on the corresponding link."
+msgstr ""
+
+#: lang.php:47
+msgid "Click on the link"
 msgstr ""
 
 #: lang.php:48
-msgid "users"
-msgstr ""
-
-#: lang.php:49
-msgid "user"
-msgstr ""
-
-#: lang.php:50
-msgid "medias"
+msgid "You may want to click on the link provided here to activate or deactivate this plugin"
 msgstr ""
 
 #: lang.php:51
-msgid "media"
+msgid "Scenario launched."
 msgstr ""
 
 #: lang.php:52
+msgid "Don't do this ever again!"
+msgstr ""
+
+#: lang.php:55
+msgid "users"
+msgstr ""
+
+#: lang.php:56
+msgid "user"
+msgstr ""
+
+#: lang.php:57
+msgid "medias"
+msgstr ""
+
+#: lang.php:58
+msgid "media"
+msgstr ""
+
+#: lang.php:59
 msgid "themes"
+msgstr ""
+
+#: lang.php:60
+msgid "plugins"
 msgstr ""
 
