@@ -3,7 +3,7 @@
 Plugin Name: WordPress GPS
 Plugin URI: http://www.globalis-ms.com
 Description: This plugin Provide an admin screen to WordPress users in which they will choose one scenario to play. That scenario will help them through the WordPress administration thanks to WP-Pointers API
-Version: 1.0.10
+Version: 1.0.11
 Author: Lionel POINTET, GLOBALIS media systems
 Author URI: http://www.globalis-ms.com
 License: GPL2
