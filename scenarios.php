@@ -228,4 +228,43 @@ $scenarios = array(
             ),
         ),
     ),
+    // (De-)Activate plugin
+    'gb_gps_activate_plugin' => array(
+        'label' => GB_GPS_ACTIVATE_PLUGIN_SCENARIO_LABEL,
+        'description' => GB_GPS_ACTIVATE_PLUGIN_SCENARIO_DESCRIPTION,
+        'capabilities' => array('activate_plugins'),
+        'pointers' => array(
+            // Hook
+            'all' => array(
+                // Pointers
+                array(
+                    'selector' => '#menu-plugins',
+                    'content' => '<h3>' . sprintf(GB_GPS_MENU_POINTER_TITLE, __('Plugins')) . '</h3><p>' . sprintf(GB_GPS_MENU_POINTER_CONTENT, __('Plugins'), GB_GPS_LOWER_CASE_PLUGINS) . '</p>',
+                    'position' => array(
+                        'edge' => 'top',
+                    ),
+                ),
+            ),
+            'plugins.php' => array(
+                // Pointers
+                array(
+                    'selector' => '.column-name',
+                    'content' => '<h3>' . GB_GPS_ACTIVATE_PLUGIN_LIST_POINTER_TITLE . '</h3><p>' . GB_GPS_ACTIVATE_PLUGIN_LIST_POINTER_CONTENT . '</p>',
+                    'position' => array(
+                        'edge' => 'bottom',
+                        'align' => 'right',
+                        'offset' => '100 10',
+                    ),
+                ),
+                array(
+                    'selector' => '.row-actions-visible:first',
+                    'content' => '<h3>' . GB_GPS_ACTIVATE_PLUGIN_LIST_ACTIONS_POINTER_TITLE . '</h3><p>' . GB_GPS_ACTIVATE_PLUGIN_LIST_POINTER_ACTIONS_CONTENT . '</p>',
+                    'position' => array(
+                        'edge' => 'left',
+                        'align' => 'right',
+                    ),
+                ),
+            ),
+        ),
+    ),
 );

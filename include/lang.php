@@ -40,6 +40,13 @@ define('GB_GPS_UPDATE_MENUS_CHOOSE_MENU_POINTER_CONTENT', __('1. Choose a menu o
 define('GB_GPS_UPDATE_MENUS_ADD_TO_MENU_POINTER_CONTENT', __('2. Add some items to your menu after having selected them.', GB_GPS_TEXT_DOMAIN));
 define('GB_GPS_UPDATE_MENUS_SAVE_MENU_POINTER_CONTENT', __('3. Add some items to your menu after having selected them.', GB_GPS_TEXT_DOMAIN));
 
+define('GB_GPS_ACTIVATE_PLUGIN_SCENARIO_LABEL', __('(De-)Activate plugin', GB_GPS_TEXT_DOMAIN));
+define('GB_GPS_ACTIVATE_PLUGIN_SCENARIO_DESCRIPTION', __('Allow to activate or deactivate one plugin installed on your site.', GB_GPS_TEXT_DOMAIN));
+define('GB_GPS_ACTIVATE_PLUGIN_LIST_POINTER_TITLE', __('Select a plugin', GB_GPS_TEXT_DOMAIN));
+define('GB_GPS_ACTIVATE_PLUGIN_LIST_POINTER_CONTENT', __('Choose the plugin you want to activate or deactivate and click on the corresponding link.', GB_GPS_TEXT_DOMAIN));
+define('GB_GPS_ACTIVATE_PLUGIN_LIST_ACTIONS_POINTER_TITLE', __('Click on the link', GB_GPS_TEXT_DOMAIN));
+define('GB_GPS_ACTIVATE_PLUGIN_LIST_POINTER_ACTIONS_CONTENT', __('You may want to click on the link provided here to activate or deactivate this plugin', GB_GPS_TEXT_DOMAIN));
+
 // Messages
 define('GB_GPS_MESSAGE_LAUNCHED_SCENARIO', __('Scenario launched.', GB_GPS_TEXT_DOMAIN));
 define('GB_GPS_MESSAGE_CAPABILITY_ERROR', __('Don\'t do this ever again!', GB_GPS_TEXT_DOMAIN));
@@ -50,3 +57,4 @@ define('GB_GPS_LOWER_CASE_USER', __('user', GB_GPS_TEXT_DOMAIN));
 define('GB_GPS_LOWER_CASE_MEDIAS', __('medias', GB_GPS_TEXT_DOMAIN));
 define('GB_GPS_LOWER_CASE_MEDIA', __('media', GB_GPS_TEXT_DOMAIN));
 define('GB_GPS_LOWER_CASE_THEMES', __('themes', GB_GPS_TEXT_DOMAIN));
+define('GB_GPS_LOWER_CASE_PLUGINS', __('plugins', GB_GPS_TEXT_DOMAIN));
