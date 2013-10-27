@@ -22,6 +22,7 @@ $scenarios = array(
             'edit.php' => array(
                 array(
                     'selector' => '.add-new-h2',
+                    'post_type' => 'post',
                     'content' => '<h3>' . GB_GPS_ADD_FROM_LIST_POINTER_TITLE . '</h3><p>' . sprintf(GB_GPS_ADD_FROM_LIST_POINTER_CONTENT, __('post')) . '</p>',
                     'position' => array(
                         'edge' => 'top',
@@ -52,6 +53,7 @@ $scenarios = array(
             'edit.php' => array(
                 array(
                     'selector' => '#title',
+                    'post_type' => 'post',
                     'content' => '<h3>' . GB_GPS_ADD_CAT_TO_POST_LIST_POINTER_TITLE . '</h3><p>' . GB_GPS_ADD_CAT_TO_POST_LIST_POINTER_CONTENT . '</p>',
                     'position' => array(
                         'edge' => 'bottom',
@@ -63,6 +65,7 @@ $scenarios = array(
             'post.php' => array(
                 array(
                     'selector' => '#categorydiv',
+                    'post_type' => 'post',
                     'content' => '<h3>' . GB_GPS_ADD_CAT_TO_POST_CATEGORY_POINTER_TITLE . '</h3><p>' . GB_GPS_ADD_CAT_TO_POST_CATEGORY_POINTER_CONTENT .'</p>',
                     'position' => array(
                         'edge' => 'bottom',

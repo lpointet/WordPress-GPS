@@ -26,6 +26,7 @@ WordPress GPS provides some hooks to plugin writers:
 
     $pointer_config = array(
         'selector' => '#menu-posts',
+        'post_type' => 'post',
         'content' => '<h3>title</h3><p>content</p>',
         'position' => array(
             'edge' => 'top',
@@ -40,6 +41,10 @@ WordPress GPS provides some hooks to plugin writers:
 **selector**
     (string) The DOM selector of the element on which the pointer will be attached.
       Default: ''
+
+**post_type**
+    (string) The post type slug differenciating some screens on which the pointer will be attached. For example, 'edit.php' hook could be on 'post' or 'page' post types.
+      Default: '' (every post types)
 
 **content**
     (string) The content of the pointer.
@@ -107,6 +112,7 @@ WordPress GPS propose quelques hooks pour les développeurs de plugin :
 
     $pointer_config = array(
         'selector' => '#menu-posts',
+        'post_type' => 'post',
         'content' => '<h3>titre</h3><p>contenu</p>',
         'position' => array(
             'edge' => 'top',
@@ -121,6 +127,10 @@ WordPress GPS propose quelques hooks pour les développeurs de plugin :
 **selector**
     (string) Le sélecteur DOM de l'élément sur lequel va être attaché le pointer.
       Par défaut : ''
+
+**post_type**
+    (string) Le slug du post type différenciant plusieurs écrans. Par exemple, le hook 'edit.php' peut être sur les post types 'post' ou 'page'.
+      Par défaut : '' (tous les pos types)
 
 **content**
     (string) Le contenu du pointer.

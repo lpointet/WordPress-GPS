@@ -86,7 +86,7 @@ class GBGPS {
      * Activate pointers if we are currently playing a scenario
      */
     public function play_scenario() {
-        global $pagenow;
+        global $pagenow, $typenow;
 
         // Retrieve the current scenario
         $id = get_transient($this->get_transient_name());
@@ -94,7 +94,7 @@ class GBGPS {
         if(FALSE === $id || empty($this->scenarios[$id]))
             return;
 
-        if(GBGPS_Scenario::STOP == $this->scenarios[$id]->process($pagenow)) {
+        if(GBGPS_Scenario::STOP == $this->scenarios[$id]->process($pagenow, $typenow)) {
             $this->set_active_scenario();
         }
     }

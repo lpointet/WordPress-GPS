@@ -79,6 +79,7 @@ function gb_gps_create_pointer($args) {
         'selector' => '',
         'content' => '',
         'position' => '',
+        'post_type' => '',
     );
 
     $args = wp_parse_args($args, $defaults);
@@ -92,6 +93,7 @@ function gb_gps_create_pointer($args) {
             'selector' => $selector,
             'content' => $content,
             'position' => $position,
+            'post_type' => $post_type,
         ));
     }
 
