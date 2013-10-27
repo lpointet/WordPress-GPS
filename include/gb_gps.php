@@ -86,7 +86,7 @@ class GBGPS {
      * Activate pointers if we are currently playing a scenario
      */
     public function play_scenario() {
-        global $pagenow;
+        global $pagenow, $typenow;
 
         // Retrieve the current scenario
         $id = get_transient($this->get_transient_name());
@@ -94,7 +94,7 @@ class GBGPS {
         if(FALSE === $id || empty($this->scenarios[$id]))
             return;
 
-        if(GBGPS_Scenario::STOP == $this->scenarios[$id]->process($pagenow)) {
+        if(GBGPS_Scenario::STOP == $this->scenarios[$id]->process($pagenow, $typenow)) {
             $this->set_active_scenario();
         }
     }
@@ -126,7 +126,7 @@ class GBGPS {
      */
     public function admin_menu() {
         $this->handlePost();
-        add_menu_page( GB_GPS_ADMIN_MENU_PAGE_TITLE, GB_GPS_ADMIN_MENU_MENU_TITLE, 'edit_posts', self::MENU_SLUG, array(&$this, 'display_admin_menu') );
+        add_menu_page( GB_GPS_ADMIN_MENU_PAGE_TITLE, GB_GPS_ADMIN_MENU_MENU_TITLE, 'read', self::MENU_SLUG, array(&$this, 'display_admin_menu') );
     }
 
     /**
@@ -148,7 +148,7 @@ class GBGPS {
      */
     public function display_admin_menu() {
         // Security check
-        if(!current_user_can('edit_posts')) {
+        if(!current_user_can('read')) {
             wp_die(GB_GPS_MESSAGE_CAPABILITY_ERROR);
         }
 

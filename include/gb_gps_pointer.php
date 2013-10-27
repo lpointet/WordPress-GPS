@@ -4,6 +4,7 @@ class GBGPS_Pointer {
     protected $selector;
     protected $content;
     protected $position;
+    protected $post_type;
 
     /**
      * Constructor: initialize the class variables
@@ -14,6 +15,7 @@ class GBGPS_Pointer {
             'selector' => '',
             'content' => '',
             'position' => '',
+            'post_type' => '',
         );
 
         $args = wp_parse_args($args, $defaults);
@@ -33,19 +35,24 @@ class GBGPS_Pointer {
             'selector' => $this->selector,
             'content' => $this->content,
             'position' => $this->position,
+            'post_type' => $this->post_type,
         );
     }
 
     /**
      * Include the needed JavaScript to show the pointer(s)
      */
-    public static function process($pointers) {
+    public static function process($pointers, $post_type) {
         $nonce = wp_create_nonce('gb_gps_ajax_nonce');
 
         $args = array();
         foreach($pointers as $pointer) {
-            $args[] = $pointer->args();
+            if( empty( $pointer->post_type ) || $post_type == $pointer->post_type )
+                $args[] = $pointer->args();
         }
+
+        if( empty( $args ) )
+            return FALSE;
 
         ?>
         <script type="text/javascript">
@@ -90,5 +97,7 @@ class GBGPS_Pointer {
         //]]>
         </script>
         <?php
+
+        return TRUE;
     }
 }

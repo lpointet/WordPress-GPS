@@ -28,16 +28,18 @@ class GBGPS_Scenario {
     /**
      * Retrieve the current page hook and decide which pointer to show
      */
-    public function process($hook) {
+    public function process($hook, $post_type = NULL) {
         if(empty($this->pointers[$hook])) {
             $hook = 'all';
         }
 
+        $displayed = FALSE;
+
         if(!empty($this->pointers[$hook])) {
-            GBGPS_Pointer::process($this->pointers[$hook]);
+            $displayed = GBGPS_Pointer::process($this->pointers[$hook], $post_type);
         }
 
-        return $this->places[$hook] == $this->nb_pointers - 1 ? self::STOP : 0;
+        return $displayed && $this->places[$hook] == $this->nb_pointers - 1 ? self::STOP : 0;
     }
 
     /**
