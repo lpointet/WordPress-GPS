@@ -2,8 +2,8 @@
 Contributors: lpointet
 Tags: admin, help, tutorial, scenario, pointers, backend, plugin, training
 Requires at least: 3.3.0
-Tested up to: 3.6
-Stable tag: 1.0.13
+Tested up to: 4.7.2
+Stable tag: 1.0.14
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,10 @@ Of course it is, but only through the API for now.
 2. Follow the pointers!
 
 == Changelog ==
+
+= 1.0.14 =
+* Fix old class names
+* Fix old way to position pointers (offset)
 
 = 1.0.13 =
 * Removed useless capability check for displaying admin menu / props colouro
