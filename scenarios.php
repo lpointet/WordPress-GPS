@@ -21,7 +21,7 @@ $scenarios = array(
             ),
             'edit.php' => array(
                 array(
-                    'selector' => '.add-new-h2',
+                    'selector' => '.page-title-action',
                     'post_type' => 'post',
                     'content' => '<h3>' . GB_GPS_ADD_FROM_LIST_POINTER_TITLE . '</h3><p>' . sprintf(GB_GPS_ADD_FROM_LIST_POINTER_CONTENT, __('post')) . '</p>',
                     'position' => array(
@@ -95,7 +95,7 @@ $scenarios = array(
             ),
             'users.php' => array(
                 array(
-                    'selector' => '.add-new-h2',
+                    'selector' => '.page-title-action',
                     'content' => '<h3>' . GB_GPS_ADD_FROM_LIST_POINTER_TITLE . '</h3><p>' . sprintf(GB_GPS_ADD_FROM_LIST_POINTER_CONTENT, GB_GPS_LOWER_CASE_USER) . '</p>',
                     'position' => array(
                         'edge' => 'top',
@@ -157,7 +157,7 @@ $scenarios = array(
             ),
             'upload.php' => array(
                 array(
-                    'selector' => '.add-new-h2',
+                    'selector' => '.page-title-action',
                     'content' => '<h3>' . GB_GPS_ADD_FROM_LIST_POINTER_TITLE . '</h3><p>' . sprintf(GB_GPS_ADD_FROM_LIST_POINTER_CONTENT, GB_GPS_LOWER_CASE_MEDIA) . '</p>',
                     'position' => array(
                         'edge' => 'top',
@@ -196,7 +196,7 @@ $scenarios = array(
             ),
             'themes.php' => array(
                 array(
-                    'selector' => '#menu-appearance a[href=nav-menus\\\.php]',
+                    'selector' => '#menu-appearance a[href="nav-menus.php"]',
                     'content' => '<h3>' . sprintf(GB_GPS_MENU_POINTER_TITLE, __('Menus')) . '</h3><p>' . sprintf(GB_GPS_MENU_POINTER_CONTENT, __('Menus'), __('menus')) . '</p>',
                     'position' => array(
                         'edge' => 'top',
@@ -205,7 +205,7 @@ $scenarios = array(
             ),
             'nav-menus.php' => array(
                 array(
-                    'selector' => '.menu-add-new',
+                    'selector' => '.add-edit-menu-action',
                     'content' => '<p>' . GB_GPS_UPDATE_MENUS_CHOOSE_MENU_POINTER_CONTENT . '</p>',
                     'position' => array(
                         'edge' => 'left',
@@ -260,7 +260,7 @@ $scenarios = array(
                     ),
                 ),
                 array(
-                    'selector' => '.row-actions-visible:first',
+                    'selector' => '.row-actions.visible:first',
                     'content' => '<h3>' . GB_GPS_ACTIVATE_PLUGIN_LIST_ACTIONS_POINTER_TITLE . '</h3><p>' . GB_GPS_ACTIVATE_PLUGIN_LIST_POINTER_ACTIONS_CONTENT . '</p>',
                     'position' => array(
                         'edge' => 'left',
