@@ -3,7 +3,7 @@
 Plugin Name: WordPress GPS
 Plugin URI: https://github.com/lpointet/wordpress-gps
 Description: This plugin Provide an admin screen to WordPress users in which they will choose one scenario to play. That scenario will help them through the WordPress administration thanks to WP-Pointers API
-Version: 1.0.14
+Version: 1.0.15
 Author: Lionel POINTET
 Author URI: https://github.com/lpointet/
 License: GPL2
