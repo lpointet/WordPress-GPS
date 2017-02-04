@@ -21,12 +21,13 @@ $scenarios = array(
             ),
             'edit.php' => array(
                 array(
-                    'selector' => '.add-new-h2',
+                    'selector' => '.page-title-action',
                     'post_type' => 'post',
                     'content' => '<h3>' . GB_GPS_ADD_FROM_LIST_POINTER_TITLE . '</h3><p>' . sprintf(GB_GPS_ADD_FROM_LIST_POINTER_CONTENT, __('post')) . '</p>',
                     'position' => array(
                         'edge' => 'top',
-                        'offset' => '-40 0',
+	                    'at' => 'bottom',
+                        'my' => 'left-20% top',
                     ),
                 ),
             ),
@@ -58,7 +59,8 @@ $scenarios = array(
                     'position' => array(
                         'edge' => 'bottom',
                         'align' => 'right',
-                        'offset' => '-100 23',
+	                    'at' => 'left',
+                        'my' => 'left+35 top-140',
                     ),
                 ),
             ),
@@ -69,7 +71,6 @@ $scenarios = array(
                     'content' => '<h3>' . GB_GPS_ADD_CAT_TO_POST_CATEGORY_POINTER_TITLE . '</h3><p>' . GB_GPS_ADD_CAT_TO_POST_CATEGORY_POINTER_CONTENT .'</p>',
                     'position' => array(
                         'edge' => 'bottom',
-                        'offset' => '0 -5',
                     ),
                 ),
             ),
@@ -95,11 +96,12 @@ $scenarios = array(
             ),
             'users.php' => array(
                 array(
-                    'selector' => '.add-new-h2',
+                    'selector' => '.page-title-action',
                     'content' => '<h3>' . GB_GPS_ADD_FROM_LIST_POINTER_TITLE . '</h3><p>' . sprintf(GB_GPS_ADD_FROM_LIST_POINTER_CONTENT, GB_GPS_LOWER_CASE_USER) . '</p>',
                     'position' => array(
                         'edge' => 'top',
-                        'offset' => '-40 0',
+                        'at' => 'bottom',
+                        'my' => 'left-20% top',
                     ),
                 ),
             ),
@@ -109,7 +111,7 @@ $scenarios = array(
                     'content' => '<p>' . GB_GPS_LOGIN_FIELD_POINTER_CONTENT . '</p>',
                     'position' => array(
                         'edge' => 'left',
-                        'offset' => '0 -30',
+	                    'at' => 'right top-100%',
                     ),
                 ),
                 array(
@@ -117,15 +119,15 @@ $scenarios = array(
                     'content' => '<p>' . GB_GPS_EMAIL_FIELD_POINTER_CONTENT . '</p>',
                     'position' => array(
                         'edge' => 'left',
-                        'offset' => '0 -30',
+                        'at' => 'right top-100%',
                     ),
                 ),
                 array(
-                    'selector' => '#pass1',
+                    'selector' => '.user-pass1-wrap',
                     'content' => '<p>' . GB_GPS_PASSWORD_FIELD_POINTER_CONTENT . '</p>',
                     'position' => array(
                         'edge' => 'left',
-                        'offset' => '0 -30',
+                        'at' => 'left+44% top-10%',
                     ),
                 ),
                 array(
@@ -157,11 +159,12 @@ $scenarios = array(
             ),
             'upload.php' => array(
                 array(
-                    'selector' => '.add-new-h2',
+                    'selector' => '.page-title-action',
                     'content' => '<h3>' . GB_GPS_ADD_FROM_LIST_POINTER_TITLE . '</h3><p>' . sprintf(GB_GPS_ADD_FROM_LIST_POINTER_CONTENT, GB_GPS_LOWER_CASE_MEDIA) . '</p>',
                     'position' => array(
                         'edge' => 'top',
-                        'offset' => '-40 0',
+                        'at' => 'bottom',
+                        'my' => 'left-20% top',
                     ),
                 ),
             ),
@@ -171,7 +174,6 @@ $scenarios = array(
                     'content' => '<h3>' . GB_GPS_ADD_MEDIA_UPLOAD_POINTER_TITLE . '</h3><p>' . GB_GPS_ADD_MEDIA_UPLOAD_POINTER_CONTENT . '</p>',
                     'position' => array(
                         'edge' => 'top',
-                        'offset' => '-25 0',
                     ),
                 ),
             ),
@@ -196,7 +198,7 @@ $scenarios = array(
             ),
             'themes.php' => array(
                 array(
-                    'selector' => '#menu-appearance a[href=nav-menus\\\.php]',
+                    'selector' => '#menu-appearance a[href="nav-menus.php"]',
                     'content' => '<h3>' . sprintf(GB_GPS_MENU_POINTER_TITLE, __('Menus')) . '</h3><p>' . sprintf(GB_GPS_MENU_POINTER_CONTENT, __('Menus'), __('menus')) . '</p>',
                     'position' => array(
                         'edge' => 'top',
@@ -205,11 +207,12 @@ $scenarios = array(
             ),
             'nav-menus.php' => array(
                 array(
-                    'selector' => '.menu-add-new',
+                    'selector' => '.add-edit-menu-action',
                     'content' => '<p>' . GB_GPS_UPDATE_MENUS_CHOOSE_MENU_POINTER_CONTENT . '</p>',
                     'position' => array(
                         'edge' => 'left',
-                        'offset' => '0 -35',
+	                    'at' => 'right top',
+	                    'my' => 'left top-35%',
                     ),
                 ),
                 array(
@@ -217,7 +220,8 @@ $scenarios = array(
                     'content' => '<p>' . GB_GPS_UPDATE_MENUS_ADD_TO_MENU_POINTER_CONTENT . '</p>',
                     'position' => array(
                         'edge' => 'left',
-                        'offset' => '0 -35',
+	                    'at' => 'right',
+	                    'my' => 'left',
                     ),
                 ),
                 array(
@@ -225,7 +229,8 @@ $scenarios = array(
                     'content' => '<p>' . GB_GPS_UPDATE_MENUS_SAVE_MENU_POINTER_CONTENT . '</p>',
                     'position' => array(
                         'edge' => 'right',
-                        'offset' => '-15 -37',
+	                    'at' => 'left',
+	                    'my' => 'right',
                     ),
                 ),
             ),
@@ -256,11 +261,12 @@ $scenarios = array(
                     'position' => array(
                         'edge' => 'bottom',
                         'align' => 'right',
-                        'offset' => '100 10',
+	                    'at' => 'center',
+	                    'my' => 'bottom',
                     ),
                 ),
                 array(
-                    'selector' => '.row-actions-visible:first',
+                    'selector' => '.row-actions.visible:first',
                     'content' => '<h3>' . GB_GPS_ACTIVATE_PLUGIN_LIST_ACTIONS_POINTER_TITLE . '</h3><p>' . GB_GPS_ACTIVATE_PLUGIN_LIST_POINTER_ACTIONS_CONTENT . '</p>',
                     'position' => array(
                         'edge' => 'left',
