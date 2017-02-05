@@ -3,7 +3,7 @@ Contributors: lpointet
 Tags: admin, help, tutorial, scenario, pointers, backend, plugin, training
 Requires at least: 3.3.0
 Tested up to: 4.7.2
-Stable tag: 1.0.15
+Stable tag: 1.0.16
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,10 @@ Of course it is, but only through the API for now.
 2. Follow the pointers!
 
 == Changelog ==
+
+= 1.0.16 =
+* Fix typo in plugin description
+* Add i18n headers (still for GlotPress translation)
 
 = 1.0.15 =
 * Try to enable GlotPress translation
